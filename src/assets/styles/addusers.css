@@ -1,0 +1,131 @@
+/* ===== MAIN LAYOUT ===== */
+
+.addusers{
+  min-height:100vh;
+  display:flex;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+}
+
+/* ===== LEFT SIDE ===== */
+
+.addusers .left-section{
+  width:40%;
+  background:#1e293b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  padding:40px;
+}
+
+.addusers .brand{
+  text-align:center;
+}
+
+.addusers .brand-icon{
+  font-size:65px;
+  margin-bottom:15px;
+  color:#facc15;   /* yellow accent */
+}
+
+.addusers .brand h1{
+  font-size:34px;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+.addusers .brand p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* ===== RIGHT SIDE ===== */
+
+.addusers .right-section{
+  width:60%;
+  background:#0f172a;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+/* ===== FORM CARD ===== */
+
+.addusers .formbox{
+  width:380px;
+  background:#1e293b;
+  padding:35px 30px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  color:white;
+}
+
+.addusers .formbox h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#22c55e;  /* green heading */
+}
+
+/* ===== FORM ===== */
+
+.addusers .formbox form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+/* INPUT */
+
+.addusers .formbox form input{
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid #334155;
+  background:#0f172a;
+  color:white;
+  font-size:14px;
+  outline:none;
+}
+
+.addusers .formbox form input:focus{
+  border-color:#22c55e;
+}
+
+/* ===== BUTTON ===== */
+
+.addusers .formbox form button{
+  margin-top:10px;
+  padding:12px;
+  border-radius:6px;
+  border:none;
+  background:#f97316;   /* orange button */
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.addusers .formbox form button:hover{
+  background:#ea580c;
+  transform:translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+.addusers{
+  flex-direction:column;
+}
+
+.addusers .left-section{
+  width:100%;
+  height:220px;
+}
+
+.addusers .right-section{
+  width:100%;
+}
+
+}

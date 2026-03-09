@@ -1,0 +1,136 @@
+.homepage{
+  min-height:90vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Animated floating shapes */
+.homepage::before {
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background: rgba(250, 204, 21, 0.1);
+  border-radius:50%;
+  top:10%;
+  left:-50px;
+  animation: floatShape 12s ease-in-out infinite;
+}
+
+.homepage::after {
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  background: rgba(249, 115, 22, 0.1);
+  border-radius:50%;
+  bottom:5%;
+  right:-40px;
+  animation: floatShape 15s ease-in-out infinite alternate;
+}
+
+/* Floating animation */
+@keyframes floatShape {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(45deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* hero layout */
+.hero{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+  z-index:1;
+}
+
+/* hero text */
+.hero-text{
+  max-width:500px;
+  text-align:left;
+}
+
+.hero-text h1{
+  font-size:48px;
+  margin-bottom:20px;
+  color:#facc15;
+  animation: slideUp 1s ease forwards;
+}
+
+.hero-text p{
+  font-size:18px;
+  color:#cbd5e1;
+  margin-bottom:30px;
+  line-height:1.6;
+  animation: slideUp 1.2s ease forwards;
+}
+
+/* button */
+.hero-text button{
+  padding:14px 30px;
+  background:#f97316;
+  border:none;
+  color:white;
+  font-size:16px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+  animation: slideUp 1.4s ease forwards;
+  display:flex;
+  align-items:center;
+}
+
+.hero-text button:hover{
+  background:#ea580c;
+  transform:translateY(-3px) scale(1.05);
+}
+
+/* hero image */
+.hero-image img{
+  width:300px;
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  0% { opacity:0; transform: translateY(20px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .homepage h1{
+    font-size:36px;
+  }
+
+  .homepage p{
+    font-size:16px;
+  }
+
+  .homepage button{
+    padding:12px 25px;
+    font-size:15px;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero-image img{
+    width:200px;
+  }
+}

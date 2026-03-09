@@ -1,0 +1,67 @@
+.displayusers{
+  padding:40px;
+  min-height:90vh;
+  background:#0f172a;
+}
+
+/* heading */
+
+.displayusers h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:28px;
+  color:#facc15;   /* yellow highlight */
+  letter-spacing:1px;
+}
+
+/* table */
+
+.displayusers table{
+  width:100%;
+  border-collapse:collapse;
+  background:#1e293b;
+  color:white;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* header */
+
+.displayusers th{
+  background:#f97316;
+  color:white;
+  padding:14px;
+  font-size:15px;
+}
+
+/* table cells */
+
+.displayusers td{
+  padding:12px;
+  text-align:center;
+  border-bottom:1px solid #334155;
+}
+
+/* alternate rows */
+
+.displayusers tr:nth-child(even){
+  background:#273549;
+}
+
+/* hover */
+
+.displayusers tr:hover{
+  background:#334155;
+  transition:0.2s;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.displayusers table{
+  font-size:12px;
+}
+
+}

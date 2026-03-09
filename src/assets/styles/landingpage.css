@@ -1,0 +1,207 @@
+/* ===== BACKGROUND ===== */
+
+.landingpage{
+position:relative;
+height:100vh;
+width:100%;
+overflow:hidden;
+
+background:
+linear-gradient(rgba(17,24,39,0.85), rgba(30,64,175,0.85)),
+url("https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1470&auto=format&fit=crop");
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* blur layer */
+
+.landingpage::before{
+content:"";
+position:absolute;
+inset:0;
+backdrop-filter:blur(6px);
+z-index:0;
+}
+
+/* floating icons */
+
+.floating-icons{
+position:absolute;
+width:100%;
+height:100%;
+z-index:1;
+pointer-events:none;
+}
+
+.floating-icons span{
+position:absolute;
+font-size:30px;
+opacity:0.15;
+animation:floatUp 15s linear infinite;
+}
+
+.floating-icons span:nth-child(1){
+left:10%;
+animation-delay:0s;
+}
+
+.floating-icons span:nth-child(2){
+left:50%;
+animation-delay:5s;
+}
+
+.floating-icons span:nth-child(3){
+left:80%;
+animation-delay:10s;
+}
+
+/* container */
+
+.landingpage .container{
+position:relative;
+z-index:2;
+width:420px;
+background:white;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+overflow:hidden;
+}
+
+/* header */
+
+.container .head{
+background:#111827;
+color:white;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.container .head h2{
+font-size:16px;
+letter-spacing:1px;
+}
+
+/* toggle buttons */
+
+.head .btn{
+background:#374151;
+width:120px;
+height:35px;
+border-radius:50px;
+overflow:hidden;
+}
+
+.head .btn button{
+width:50%;
+height:100%;
+border:none;
+background:white;
+font-weight:600;
+cursor:pointer;
+}
+
+.head .btn .right{
+margin-left:50%;
+}
+
+/* form */
+
+.formbox{
+padding:30px 25px;
+}
+
+.formbox input{
+width:100%;
+padding:12px 14px;
+margin:12px 0;
+border-radius:6px;
+border:1px solid #ccc;
+outline:none;
+}
+
+.formbox input:focus{
+border-color:#111827;
+box-shadow:0 0 5px rgba(17,24,39,0.3);
+}
+
+/* password field */
+
+.password-field{
+position:relative;
+}
+
+.password-field input{
+padding-right:40px;
+}
+
+.password-field .eye-icon{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#555;
+}
+
+/* submit button */
+
+.formbox button{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:6px;
+background:#f97316;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.formbox button:hover{
+background:#ea580c;
+}
+
+/* link */
+
+.formbox a{
+display:block;
+margin-top:15px;
+text-align:center;
+font-size:13px;
+text-decoration:none;
+color:#111827;
+}
+
+.formbox a:hover{
+text-decoration:underline;
+}
+
+/* floating animation */
+
+@keyframes floatUp{
+0%{
+bottom:-10%;
+transform:translateX(0);
+}
+100%{
+bottom:110%;
+transform:translateX(20px);
+}
+}
+
+/* responsive */
+
+@media(max-width:500px){
+
+.landingpage .container{
+width:90%;
+}
+
+}

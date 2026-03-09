@@ -1,0 +1,134 @@
+.cartitems{
+padding:40px;
+background:#0f172a;   /* dark background */
+min-height:90vh;
+}
+
+/* heading */
+
+.cartitems h2{
+text-align:center;
+margin-bottom:30px;
+color:wheat;   /* bright green */
+font-size:28px;
+letter-spacing:1px;
+}
+
+/* table */
+
+.cartitems table{
+width:100%;
+border-collapse:collapse;
+background:#1e293b;
+color:white;
+border-radius:8px;
+overflow:hidden;
+}
+
+/* table header */
+
+.cartitems th{
+background:#f97316;   /* orange */
+color:white;
+padding:14px;
+}
+
+/* table cells */
+
+.cartitems td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #334155;
+}
+
+/* row hover */
+
+.cartitems tr:hover{
+background:#334155;
+}
+
+/* product image */
+
+.cartitems img{
+width:55px;
+border-radius:6px;
+}
+
+/* quantity buttons */
+
+.qty-control{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.qty-control button{
+width:32px;
+height:32px;
+border:none;
+background:green;   /* green */
+color:white;
+cursor:pointer;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.qty-control button:hover{
+background:#16a34a;
+transform:scale(1.1);
+}
+
+.qty-control span{
+font-weight:bold;
+}
+
+/* delete icon */
+
+.delete-icon{
+color:#ef4444;
+cursor:pointer;
+font-size:24px;
+transition:0.3s;
+}
+
+.delete-icon:hover{
+color:#dc2626;
+transform:scale(1.2);
+}
+
+/* grand total */
+
+.grand-total{
+margin-top:25px;
+text-align:right;
+font-size:20px;
+font-weight:bold;
+color:#facc15;   /* yellow total */
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.cartitems table{
+font-size:12px;
+}
+
+.cartitems img{
+width:40px;
+}
+
+}
+
+/* floating */
+.cartitems h2{
+animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
