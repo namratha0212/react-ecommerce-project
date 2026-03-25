@@ -15,7 +15,7 @@ Email: admin@gmail.com
 Password: Admin@123
 
 ## Live Demo
-https://your-netlify-link.netlify.app
+https://namratha-online-shop.netlify.app/
 
 ## GitHub Repository
 https://github.com/namratha0212/react-ecommerce-project
